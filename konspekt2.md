@@ -5,7 +5,7 @@
 
 ## Списки 
 ### Однонаправленный список
-![Списки.jpg](pictures/Списки.jpg) \
+![Списки.jpg](pictures/Lists.jpg) \
 ``` C
 struct Node {
     int data; // может быть и другой тип данных
@@ -30,7 +30,7 @@ struct Node* Create(int data){
 }
 ```
 3. Добавление элемента \
-![Добавление.jpg](pictures/Добавление.jpg)
+![Добавление.jpg](pictures/Adding.jpg)
 ```c
 void Insert(struct Node *pNode, struct Node * newNode){
     newNode->pNext = pNode->Next;
@@ -38,7 +38,7 @@ void Insert(struct Node *pNode, struct Node * newNode){
 }
 ```
 4. Добавление элемента в начало списка \
-![Добавление-в-начало.jpg](pictures/Добавление-в-начало.jpg)
+![Добавление-в-начало.jpg](pictures/Prepend.jpg)
 ```c
 void PushFront(struct Node **pHead, struct Node *newNode){
     newNode->pNext = *pHead;
@@ -47,7 +47,7 @@ void PushFront(struct Node **pHead, struct Node *newNode){
 }
 ```
 5. Удаление элемента \
-![Удаление.jpg](pictures/Удаление.jpg)
+![Удаление.jpg](pictures/Remove.jpg)
 ```c
 void Delete(struct Node *pNode){
     struct Node * ptr;
@@ -59,7 +59,7 @@ void Delete(struct Node *pNode){
 ```
 
 6. Удаление из начала списка \
-![Обход.jpg](pictures/Обход.jpg)
+![Обход.jpg](pictures/Bypass.jpg)
 ```c
 struct Node * ptr = pHead;
 pHead = pHead->pNext;
@@ -74,7 +74,7 @@ while(ptr != NULL) {
 }
 ```
 ### Двунаправленный (двусвязный) список
-![Двусвязный_список.jpg](pictures/Двусвязный_список.jpg)
+![Двусвязный_список.jpg](pictures/Doubly_linked_list.jpg)
 ## Стек
 Канонические операции **push** и **pop**.
 Есть ещё функция **peak** отвечает за просмотр элемент на вершине стека
@@ -113,6 +113,6 @@ while(ptr != NULL) {
 | 12  |      | 6 2 + 5 * 8 4 / - |
 
 Хэш-функции \
-![Хэш.jpg](pictures/Хэш.jpg) \
+![Хэш.jpg](pictures/Hash.jpg) \
 ![M.jpg](pictures/M.jpg) \
 Коллизия - совпадение значения хеш-функции при разных аргументах \

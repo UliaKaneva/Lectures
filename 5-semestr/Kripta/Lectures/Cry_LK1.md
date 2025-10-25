@@ -32,10 +32,12 @@ $D_k = E_k ^{-1}$
 ```c++
 for (int i = 0; i < permutationRule.Length; i++)
 {
-    int num = permutationRule[i];
+    int num = permutationRule[i] - (int)startBit;
+    num = indexing == BitIndexing.LargeIndexFirst ? totalInputBits - num - 1 : num;
     int numByte = num / 8;
     int numPos = num % 8;
-    output[i / 8] |= (byte) (((input[numByte] >> numPos) & 1) << (i % 8));
+    
+    output[i / 8] |= (byte)(((input[numByte] >> (7 - numPos)) & 1) << (7 - (i % 8)));
 }
 ``` 
 <u>_Исправила на свой вариант перестановки битов! Вариант с лекции в предыдущем комите_</u> 

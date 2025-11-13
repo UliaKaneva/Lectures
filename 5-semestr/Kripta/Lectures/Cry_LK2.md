@@ -16,9 +16,14 @@ $a \cdot e + b \cdot \varphi(N) = 1$ -> \
 $a \cdot e \equiv 1 \pmod{\varphi(N)}$ ->\
 $a = e^{-1} = d$
 ### Обоснование RSA
-$C^d \equiv (m^e)^d \equiv m^{ed} \equiv m^{K*\varphi(N) + 1} \equiv m^{K*\varphi(N)}*m\equiv \text{по теореме Эйлера}  \equiv m \pmod{N}$ \
+$C^d \equiv (m^e)^d \equiv m^{ed} \equiv m^{K*\varphi(N) + 1} \equiv$
+
+$\equiv m^{K*\varphi(N)}*m\equiv \text{по теореме Эйлера}  \equiv m \pmod{N}$ 
+
 $\exists k: ed = k*\varphi(N) + 1$
+
 ## Rijndal (рейндел) (необходимая теория)
+
 $GF(p^n)$ - конечное поле из $p^n$ элементов, где p-простое, $n \in N$\
 _**Пример:**_ $GF(2) = \{0, 1\}$ - (Поле Галуа или конечное поле) \
 \+ : xor\
@@ -30,24 +35,30 @@ $b_j \in \{0, 1\}$, $j \in \{0, ..., 7\}$\
 b => $b(x) = \displaystyle\sum_{j=0}^{7}(b_jx^j)$\
 $b = 37_{16} = 00110111 = x^5 \oplus x^4 \oplus x^2 \oplus x \oplus 1$\
 \+: $a + b := a \oplus b$ 
+
 ---
 Неприводимый многочлен - многочлен, который нельзя разложить на множители в данном поле\
 $m(x) = 11B_{16} = 100011011_2$ - модуль алгоритма Рейнделя: $=x^8+x^4+x^3+x+1$ - неприводимый\
 $\forall a, b \in GF(2^8)$\
-$a*b \equiv a(x)*b(x) \bmod{m(x)}$ -> $*$ - обычное умножение
-----
+$a*b \equiv a(x)\cdot b(x) \bmod{m(x)}$ -> $\cdot$ - обычное умножение
+
+---
+
 Упражнение:\
 Получить произведение данных элементов в данном поле (+ это xor)\
 $57_{16}*83_{16} =$\
-![LK-2-1.png](../picturec/LK-2-1.png)
-----
+<img src="../picturec/LK-2-1.png" style="width: 600px; height: auto;">
+
+---
+
 $b \in GF(2^8)$\
 $b \neq 0$\
 $b^{-1}$ -- ? Можно использовать расширенный алгоритм Евклида
 $b^{2^8 -2} = b^{-1}$ \
 $b^{2^8 - 1}=b^{2^8 - 2 + 1} = 1$\
 $b^{2^8 -2}b = 1$ => $b^{2^8-2} = b^{-1}$
-----
+
+---
 $X^n \pmod{X^4+1} = X^{n \bmod  4}$, $n \in N$\
 Доказательство: $X^4 \bmod (X^4 + 1) = 1$\
 $x^4=(x^4 + 1) + 1 \bmod (x^4 + 1) = 1$\

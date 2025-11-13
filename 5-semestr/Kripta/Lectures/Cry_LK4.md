@@ -5,7 +5,7 @@ $x \in \mathbb{N}: a^x = b$\
 $a, b \in G$\
 $x = log_a(b)$ - Долго считать\
 $G = < g >$, $\forall g \in G : a = g^m$\
-![LK-4-1.png](../picturec/LK-4-1.png) \
+<img src="../picturec/LK-4-1.png" style="width: 400px; height: auto;">\
 a - знает только Алиса, b - знает только Боб\
 $\tilde{g}$ известно всем
 ### Схема Шамира
@@ -19,13 +19,15 @@ $F_p$ - поле вычетов по модулю P. \
 Каждый участник получает свой личный $x_i$, этот параметр известен.\
 Из $F_p$ д.л. выбирает $T-1$ элемент и строит многочлен $F(x) = K + \displaystyle\sum_{j = 1}^{T-1}a_jx^j$.\
 $y_i = F(x_i)$, y_i выдаётся соотв. участнику (это секрет)\
-L - участников собрались и строят систему уравнений:\
-$ 
+L - участников собрались и строят систему уравнений:
+
+$$
 \begin{cases}
 y_1 = K + \displaystyle\sum_{j = 1}^{T-1}a_jx_1^j\\
 y_L = K + \displaystyle\sum_{j = 1}^{T-1}a_jx_L^j
 \end{cases}
-$
+$$
+
 #### Алгоритм восстановления ключа:
 $B_j = \displaystyle\prod_{\alpha = 1}^{T}\frac{x_\alpha}{x_\alpha - x_j}$\
 $K = \displaystyle\sum_{j = 1}^TB_jy_j$

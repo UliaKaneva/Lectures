@@ -87,7 +87,10 @@ MixColumn(State){
 
 $a(x) = A_3 \cdot x^3 + A_2 \cdot x^2 + A_1 \cdot x + A_0$\
 $c(x) = 03_{16} \cdot x^3 + 01_{16} \cdot x^2 + 01_{16} \cdot x + 02_{16}$\
-$a(x) = a(x) \cdot c(x) \mod {(X^4 + 1)}$
-![LK-3-3.png](../picturec/LK-3-3.png)
+$a(x) = a(x) \cdot c(x) \mod {(X^4 + 1)}$\
+$a(x)\cdot c(x) = (\displaystyle\sum_j A_j X^j)(\displaystyle\sum_j C_j X^j)= \displaystyle\sum_l (\displaystyle\sum_{j+k=l} A_j C_k) X^l$\
+$(a_0+a_1x+a_2x^2)(b_0+b_1x+b_2x^2) =$\
+$a_0b_0+(a_0b_1+a_1b_0)x+(a_0b_2+a_1b_1+a_2b_0)x^2+(a_1b_2+a_2+b_1)x^3+a_2b_2x^4$
+
 
 Для дешифрования нужно взять многочлен $d(x) = 0B_{16} \cdot x^3 + 0D_{16} \cdot x^2 + 09_{16} \cdot x + 0E_{16}$

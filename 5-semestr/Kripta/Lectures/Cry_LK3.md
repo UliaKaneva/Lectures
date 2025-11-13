@@ -27,8 +27,8 @@ ShiftRow(State){
     // Выполняется воздействие на строчки
 }
 ```
+<img src="../picturec/LK-3-1.png" style="width: 600px; height: auto;">
 
-![LK-3-1.png](../picturec/LK-3-1.png) \
 ```c++
 SubBute(State){
     for ... {
@@ -45,8 +45,13 @@ SubBute(State){
     
 }
 ```
-$i^{-1}$ - обратный элемент в $GF(2^8)$\
-Матрица $A =
+$i^{-1}$ - обратный элемент в - $GF(2^8)$
+
+
+Матрица A
+
+$$
+A =
 \begin{pmatrix}
 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 \\
@@ -57,13 +62,16 @@ $i^{-1}$ - обратный элемент в $GF(2^8)$\
 0 & 0 & 1 & 1 & 1 & 1 & 1 & 0 \\
 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1
 \end{pmatrix}
-$ \
+$$
+
 $A \times v \oplus f$
+
 ---
-Трюк: \
-Пришло $11011001$: \
+Трюк:\
+Пришло $11011001$:\
 $1101 \oplus 1001 = 0100 \to 01 \oplus 00 = 01 \to 0 \oplus 1 = 1$\
 Всего 3 $\oplus$
+
 ---
 $Sbox[i] = A \times i^{-1} + f$\
 $invSbox[State[i]] = i$ \
@@ -74,7 +82,8 @@ MixColumn(State){
     // Смотри картинку
 }
 ```
-![LK-3-2.png](../picturec/LK-3-2.png)
+
+<img src="../picturec/LK-3-2.png" style="width: 300px; height: auto;">
 
 $a(x) = A_3 \cdot x^3 + A_2 \cdot x^2 + A_1 \cdot x + A_0$\
 $c(x) = 03_{16} \cdot x^3 + 01_{16} \cdot x^2 + 01_{16} \cdot x + 02_{16}$\

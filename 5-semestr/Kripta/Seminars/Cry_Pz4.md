@@ -111,4 +111,8 @@ $\forall i \in [1...n] r_i \in [0, ... a_i)$\
 ##### I
 $\exists ! N \in [0...\prod_{i=1}^na_i):$\
 ![PZ-4-6.png](../picturec/PZ-4-6.png)\
-
+Доказательство:\
+![PZ-4-7.png](../picturec/PZ-4-7.png)\
+![PZ-4-8.png](../picturec/PZ-4-8.png)\
+![PZ-4-9.png](../picturec/PZ-4-9.png)\
+![PZ-4-10.png](../picturec/PZ-4-10.png)

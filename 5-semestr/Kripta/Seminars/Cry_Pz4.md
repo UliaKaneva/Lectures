@@ -48,7 +48,7 @@ $(\frac{a}{n}) = \prod_{i=1}^t(\frac{a}{p_i})^{k_i}$  $[=0 <=> (a,n) \ne 1]$\
  - Тест Миклера-Рабина
    - $n- 1 = 2^d \cdot S$, S не делится на 2
      1) $a^s \equiv 1 \pmod n$
-     2) $\forall i \in [1,..., d] $ $ a^{2^iS} \equiv -1 \pmod n$
+     2) $\forall i \in \[1,..., d\]$ :  $a^{2^i S} \equiv -1 \pmod{n}$
    - $P_{PT} = 4^{-1}$
 
 pq = N\

@@ -73,7 +73,7 @@ $f(x) \to x$ трудно получить
         - $\left(\frac{a \cdot b}{p}\right) = \left(\frac{a}{p}\right) \cdot \left(\frac{b}{p}\right)$
         - Критерий Эйлера: $\left(\frac{a}{p}\right) \equiv a^{\frac{p-1}{2}} \pmod p$
         - Квадратичный закон
-          взаимности: $\left(\frac{q}{p}\right) \equiv a^{\frac{p-1}{2} \cdot \frac{q-1}{2}} \cdot \left(\frac{q}{p}\right) \pmod p$
+          взаимности: $\left(\frac{q}{p}\right) \equiv (-1)^{\frac{p-1}{2} \cdot \frac{q-1}{2}} \cdot \left(\frac{p}{q}\right) \pmod p$
     8) Символ Якоби: \
        $P$ - нечётное число, $P > 1$, $a$ - нечётное целое число или 0\
        $P = (p_1)^{\alpha_1} \cdot (p_2)^{\alpha_2} \cdot ... \cdot (p_n)^{\alpha_n}$\

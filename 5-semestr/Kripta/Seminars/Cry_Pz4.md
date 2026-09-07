@@ -48,7 +48,7 @@ $(\frac{a}{n}) = \prod_{i=1}^t(\frac{a}{p_i})^{k_i}$  $[=0 <=> (a,n) \ne 1]$\
  - Тест Миклера-Рабина
    - $n- 1 = 2^d \cdot S$, S не делится на 2
      1) $a^s \equiv 1 \pmod n$
-     2) $\forall i \in [1,..., d] $ $ a^{2^iS} \equiv -1 \pmod n$
+     2) $\forall i \in \[1,..., d\]$ :  $a^{2^i S} \equiv -1 \pmod{n}$
    - $P_{PT} = 4^{-1}$
 
 pq = N\
@@ -65,8 +65,8 @@ $\varphi(N) = \sum^{N-1}_{i=1 ((i, N) = 1)}1$\
 2) ${X_R, +_R} = A$
    1) $\forall x_1, x_2 \in X_R$ $x_1 +_R x_2 \in X_R$ (Если выполняется только это свойство то эта структура называется Магма)
    2) $\forall x_1, x_2, x_3 \in X_R$ $(x_1 +_R x_2) +_R x_3 = x_1 +_R (x_2 +_R x_3)$ (При выполнении 1-2 то это полугруппа)
-   3) $\exists e_{+_R} \in X_R \forall x \in X_R$, $e_{+_R} +_R x = x$ (1-3 Моноид)
-   4) $\forall x \in X_R \exists! x^{-1} \in X_R: x^{-1} +_R x = e_{+_R}$ (1-4) группа
+   3) $\exists e_{+R} \in X_R \forall x \in X_R$, $e_{+R} + x = x$ (1-3 Моноид)
+   4) $\forall x \in X_R \exists! x^{-1} \in X_R: x^{-1} + x = e_{+R}$ (1-4) группа
    5) $\forall x_1, x_2 \in X_R$: $x_1 +_R x_2 = x_2 +_R x_1$ (Коммутативная группа\ Абелева группа)
 3) ${X_R, *_R} = H$ - полугруппа
 4) $\forall a, b, c \in R$ : $a *_R (b +_R c) = a *_R b + a *_R c$
